@@ -1,8 +1,10 @@
 <script>
   // @ts-nocheck
 
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, createEventDispatcher } from 'svelte';
   import SwipeSnap from '../helpers/SwipeSnap';
+
+  const fire = createEventDispatcher();
 
   /**
    * @type {number}
