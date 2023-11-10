@@ -190,7 +190,7 @@ transition-duration: ${touch_end ? this.transition_duration : '0'}ms;
     this.active_item = this.active_indicator;
     this.default_index = this.active_item;
 
-    console.log(this.active_indicator);
+    // console.log(this.active_indicator);
 
     this.setElementsPosition({
       end: true,
