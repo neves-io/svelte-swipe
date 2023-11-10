@@ -1,8 +1,10 @@
 <script>
   // @ts-nocheck
 
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, createEventDispatcher } from 'svelte';
   import SwipeSnap from '../helpers/SwipeSnap';
+
+  const dispatch = createEventDispatcher();
 
   /**
    * @type {number}
@@ -75,7 +77,7 @@
     update();
 
     SWIPE_PANEL.addEventListener('swipe_end', (event) => {
-      fire('change', event.detail);
+      dispatch('change', event.detail);
       activeIndicator = event.detail.active_item;
     });
   }
